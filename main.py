@@ -6,7 +6,7 @@ from check import check_solution
 
 class Solution:
 
-    def countSeniors(self, input: List[str]) -> int:
+    def solution(self, input: List[str]) -> int:
 
         return 0
     
