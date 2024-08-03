@@ -22,7 +22,7 @@ def check_solution(solution, test_cases):
     errors = False
     for i in range(len(test_cases)):
 
-        result = func(test_cases[i]["input"])
+        result = func(*test_cases[i]["input"])
 
         if result == test_cases[i]["output"]:
             print(f"{colors.green}Case {i + 1}: Correct{colors.reset}")
