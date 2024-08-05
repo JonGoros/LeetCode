@@ -15,13 +15,17 @@ class Solution:
 
 test_cases = [
     {
-        "input": 0,
+        "input": (0,),
         "output": 0
     },
     {
-        "input": 1,
+        "input": (1,),
         "output": 1,
-    }
+    },
+    {
+        "input": (2,),
+        "output": 2,
+    },
 ]
 
 ####################### END THE CODE HERE #######################
