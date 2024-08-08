@@ -6,7 +6,10 @@ class colors:
     yellow = "\033[0;33m"
     reset = "\033[0m"
 
-def check_solution(solution, test_cases):
+def default(result):
+    return result
+
+def check_solution(solution, test_cases, output_function):
     
     # Get the main function name
     func_name = ''
@@ -20,9 +23,10 @@ def check_solution(solution, test_cases):
 
     # Execute the Test Cases
     errors = False
+    if output_function == None: output_function = default
     for i in range(len(test_cases)):
 
-        result = func(*test_cases[i]["input"])
+        result = output_function(func(*test_cases[i]["input"]))
 
         if result == test_cases[i]["output"]:
             print(f"{colors.green}Case {i + 1}: Correct{colors.reset}")
